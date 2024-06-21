@@ -1,17 +1,19 @@
-n = int(input("Enter a number : "))
+# Reversing a Number
 
-reverse = 0
-flag = False
+def reverse_number(n):
+    flag = False
+    rev = 0
+    if n<0:
+        n = -n
+        flag = True
+    while n:
+        rev = (rev*10) + (n%10)
+        n = n//10
+    if flag:
+        rev = -rev
+    return rev
 
-if n<0:
-    flag = True
-    n = n*(-1)
-    
-while n:
-    reverse = (reverse*10) + n%10
-    n = n // 10
 
-if flag:
-    print(reverse*-1)
-else:
-    print(reverse)
+# Checking
+print(reverse_number(6789))
+print(reverse_number(-1234))
