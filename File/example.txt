@@ -1,0 +1,2 @@
+Given 2 integer numbers, return their product only if the product is equal to or lower than 10\
+2 3 4 5
